@@ -15,4 +15,5 @@ jobs:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoBosses"
+      target: "eco-core/core-plugin/build/libs/*.jar"
     
