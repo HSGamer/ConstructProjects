@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: ${{ inputs.repo }}
+        repository: ${{ inputs.repository }}
     - name: Set up JDK 16
       uses: actions/setup-java@v2
       with:
