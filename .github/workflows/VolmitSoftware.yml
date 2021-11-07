@@ -1,0 +1,19 @@
+name: Volmit Software
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 */3 * *'
+
+jobs:
+  React:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "VolmitSoftware/React"
+      name: "React"
+  Iris:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "VolmitSoftware/Iris"
+      name: "Iris"
