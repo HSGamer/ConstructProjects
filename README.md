@@ -12,4 +12,4 @@ A small repo to build projects with Github Actions
 * Make sure it complies with the [Contributing Rules](CONTRIBUTING.md)
 
 ## Disclaimer
-This is an open project that builds other distribution-allowed projects. If the author wants to remove the project from distributing, make a pull request and we will discuss about it
+This is an open project that builds other distribution-allowed projects. If the author wants to remove the project from distributing, make a pull request or an issue and we will discuss about it
