@@ -10,7 +10,7 @@ on:
 
 jobs:
   TAB:
-    uses: HSGamer/ConstructProjects/.github/workflows/template/maven-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/maven-build.yml@main
     with:
       repository: "NEZNAMY/TAB"
       target: "jar/target/*.jar"
