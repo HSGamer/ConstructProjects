@@ -3,6 +3,8 @@ name: Auxilor
 on:
   push:
     branches: [ main ]
+    paths:
+      - './.github/workflows/Auxilor.yml'
   schedule:
     - cron: '0 0 */3 * *'
 
