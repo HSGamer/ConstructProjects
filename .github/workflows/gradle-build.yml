@@ -25,10 +25,10 @@ jobs:
       with:
         java-version: '16.0'
         distribution: 'adopt'
-    - name: Install gradle
-      run: sudo apt-get install -y gradle
+    - name: Grant permission for gradlew
+      run: chmod +x gradlew
     - name: Build with Gradle
-      run: gradle shadowJar
+      run: ./gradlew shadowJar
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
