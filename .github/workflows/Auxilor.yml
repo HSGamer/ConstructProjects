@@ -4,16 +4,16 @@ on:
   push:
     branches: [ main ]
     paths:
-      - './.github/workflows/Auxilor.yml'
+      - '.github/workflows/Auxilor.yml'
   schedule:
     - cron: '0 0 */3 * *'
 
 jobs:
-#   eco:
-#     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
-#     with:
-#       repository: "Auxilor/eco"
-#       name: "eco"
+  eco:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/eco"
+      name: "eco"
   EcoBosses:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
