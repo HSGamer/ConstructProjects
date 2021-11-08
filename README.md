@@ -1,5 +1,5 @@
 # ConstructProjects
-A small repo to build project with Github Actions
+A small repo to build projects with Github Actions
 
 # How to use
 1. Go to [Actions](https://github.com/HSGamer/ConstructProjects/actions)
