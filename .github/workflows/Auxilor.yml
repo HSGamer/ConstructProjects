@@ -10,54 +10,54 @@ on:
 
 jobs:
   eco:
-    uses: HSGamer/ConstructProjects/.github/workflows/template/gradle-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/eco"
       name: "eco"
   EcoBosses:
-    uses: HSGamer/ConstructProjects/.github/workflows/template/gradle-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoBosses"
       target: "bin/*"
       name: "EcoBosses"
   EcoEnchants:
-    uses: HSGamer/ConstructProjects/.github/workflows/template/gradle-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoEnchants"
       target: "bin/*"
       name: "EcoEnchants"
   EcoSkills:
-    uses: HSGamer/ConstructProjects/.github/workflows/template/gradle-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoSkills"
       target: "bin/*"
       name: "EcoSkills"
   Reforges:
-    uses: HSGamer/ConstructProjects/.github/workflows/template/gradle-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/Reforges"
       target: "bin/*"
       name: "Reforges"
   EcoWeapons:
-    uses: HSGamer/ConstructProjects/.github/workflows/template/gradle-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoWeapons"
       target: "bin/*"
       name: "EcoWeapons"
   Talismans:
-    uses: HSGamer/ConstructProjects/.github/workflows/template/gradle-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/Talismans"
       target: "bin/*"
       name: "Talismans"
   EcoArmor:
-    uses: HSGamer/ConstructProjects/.github/workflows/template/gradle-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoArmor"
       target: "bin/*"
       name: "EcoArmor"
   EcoItems:
-    uses: HSGamer/ConstructProjects/.github/workflows/template/gradle-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoItems"
       target: "bin/*"
