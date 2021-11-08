@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - './.github/workflows/NEZNAMY.yml'
+      - '.github/workflows/NEZNAMY.yml'
   schedule:
     - cron: '0 0 */3 * *'
 
