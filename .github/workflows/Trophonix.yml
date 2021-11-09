@@ -17,4 +17,11 @@ jobs:
       java: 16
       os: windows-latest
       commands: |
-        wget "https://www.bencodez.com/job/VotingPlugin/lastSuccessfulBuild/artifact/VotingPlugin/target/VotingPlugin.jar" -o "./res/VotingPlugin.jar"
+        $Response = Invoke-WebRequest -Uri "https://www.bencodez.com/job/VotingPlugin/lastSuccessfulBuild/artifact/VotingPlugin/target/VotingPlugin.jar"
+        $Stream = [System.IO.StreamWriter]::new('.\res\VotingPlugin.jar', $false, $Response.Encoding)
+        try {
+          $Stream.Write($Response.Content)
+        }
+        finally {
+          $Stream.Dispose()
+        }
