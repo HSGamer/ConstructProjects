@@ -45,6 +45,8 @@ jobs:
       run: ${{ inputs.commands }}
     - name: Build with Maven
       run: mvn clean package
+      env:
+        MAVEN_OPTS: "-Xmx2048m --illegal-access=permit"
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
