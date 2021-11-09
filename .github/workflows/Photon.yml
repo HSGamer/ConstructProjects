@@ -12,5 +12,5 @@ jobs:
   AACAdditionPro:
     uses: HSGamer/ConstructProjects/.github/workflows/maven-build.yml@main
     with:
-      repository: "NEZNAMY/AACAdditionPro"
+      repository: "Photon-GitHub/AACAdditionPro"
       name: "AACAdditionPro"
