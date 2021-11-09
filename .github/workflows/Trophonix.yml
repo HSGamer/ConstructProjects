@@ -15,4 +15,4 @@ jobs:
       repository: "Trophonix/TradePlus"
       name: "TradePlus"
       commands: |
-        sudo wget "https://www.bencodez.com/job/VotingPlugin/lastSuccessfulBuild/artifact/VotingPlugin/target/VotingPlugin.jar" -o "./res/VotingPlugin.jar"
+        wget "https://www.bencodez.com/job/VotingPlugin/lastSuccessfulBuild/artifact/VotingPlugin/target/VotingPlugin.jar" -o "./res/VotingPlugin.jar"
