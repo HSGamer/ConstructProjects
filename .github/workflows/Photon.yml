@@ -1,0 +1,16 @@
+name: Photon
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/Photon.yml'
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  AACAdditionPro:
+    uses: HSGamer/ConstructProjects/.github/workflows/maven-build.yml@main
+    with:
+      repository: "NEZNAMY/AACAdditionPro"
+      name: "AACAdditionPro"
