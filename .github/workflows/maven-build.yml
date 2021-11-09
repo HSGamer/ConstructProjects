@@ -29,7 +29,6 @@ jobs:
       with:
         java-version: '16.0'
         distribution: 'adopt'
-        cache: maven
     - name: Run prebuild commands
       run: ${{ inputs.commands }}
     - name: Build with Maven
