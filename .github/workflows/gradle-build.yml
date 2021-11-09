@@ -17,6 +17,14 @@ on:
         default: 'echo Nothing here'
         required: false
         type: string
+      java:
+        default: '16'
+        required: false
+        type: string
+      distribution:
+        default: 'temurin'
+        required: false
+        type: string
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,8 +35,8 @@ jobs:
     - name: Set up JDK 16
       uses: actions/setup-java@v2
       with:
-        java-version: '16.0'
-        distribution: 'adopt'
+        java-version: ${{ inputs.java }}
+        distribution: ${{ inputs.distribution }}
     - name: Run prebuild commands
       run: ${{ inputs.commands }}
     - name: Grant permission for gradlew
