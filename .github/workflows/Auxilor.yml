@@ -57,4 +57,10 @@ jobs:
       repository: "Auxilor/EcoItems"
       target: "bin/*"
       name: "EcoItems"
+  StatTrackers:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/StatTrackers"
+      target: "bin/*"
+      name: "StatTrackers"
     
