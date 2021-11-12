@@ -22,7 +22,7 @@ on:
         required: false
         type: string
       distribution:
-        default: 'zulu'
+        default: 'temurin'
         required: false
         type: string
       os:
