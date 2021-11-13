@@ -45,6 +45,7 @@ jobs:
       with:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
+        cache: maven
     - name: Run prebuild commands
       run: ${{ inputs.commands }}
     - name: Build with Maven
