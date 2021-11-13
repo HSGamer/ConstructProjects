@@ -41,6 +41,7 @@ jobs:
       with:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
+        cache: gradle
     - name: Run prebuild commands
       run: ${{ inputs.commands }}
     - name: Grant permission for gradlew
