@@ -15,4 +15,4 @@ jobs:
       repository: "bloodmc/GriefDefender"
       name: "GriefDefender"
       java: 8
-      commands: 'git submodule update'
+      commands: 'git submodule update --init --recursive'
