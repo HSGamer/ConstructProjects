@@ -1,0 +1,16 @@
+name: bloodmc
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/bloodmc.yml'
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  GriefDefender:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "bloodmc/GriefDefender"
+      name: "GriefDefender"
