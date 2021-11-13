@@ -36,12 +36,16 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: ${{ inputs.repository }}
+    - name: Setup gradle JDK cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.gradle/jdks
+        key: gradle-${{ runner.os }}-jdks
     - name: Set up JDK
       uses: actions/setup-java@v2
       with:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
-        cache: gradle
     - name: Run prebuild commands
       run: ${{ inputs.commands }}
     - name: Grant permission for gradlew
