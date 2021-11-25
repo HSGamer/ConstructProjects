@@ -63,4 +63,8 @@ jobs:
       repository: "Auxilor/StatTrackers"
       target: "bin/*"
       name: "StatTrackers"
-    
+  libreforge:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/libreforge"
+      name: "libreforge"
