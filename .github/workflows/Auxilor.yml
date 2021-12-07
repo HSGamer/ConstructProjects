@@ -27,12 +27,14 @@ jobs:
       repository: "Auxilor/EcoSkills"
       target: "bin/*"
       name: "EcoSkills"
+      java: 17
   Reforges:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/Reforges"
       target: "bin/*"
       name: "Reforges"
+      java: 17
   EcoWeapons:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
@@ -51,12 +53,14 @@ jobs:
       repository: "Auxilor/EcoArmor"
       target: "bin/*"
       name: "EcoArmor"
+      java: 17
   EcoItems:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoItems"
       target: "bin/*"
       name: "EcoItems"
+      java: 17
   StatTrackers:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
