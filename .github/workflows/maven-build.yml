@@ -18,7 +18,7 @@ on:
         required: false
         type: string
       java:
-        default: '16'
+        default: '17'
         required: false
         type: string
       distribution:
