@@ -21,6 +21,7 @@ jobs:
       repository: "Auxilor/EcoEnchants"
       target: "bin/*"
       name: "EcoEnchants"
+      java: 17
   EcoSkills:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
