@@ -14,3 +14,4 @@ jobs:
     with:
       repository: "VolmitSoftware/Iris"
       name: "Iris"
+      java: "17"
