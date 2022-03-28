@@ -15,6 +15,7 @@ jobs:
       repository: "Auxilor/EcoCrates"
       target: "bin/*"
       name: "EcoCrates"
+      java: 17
   EcoBosses:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
