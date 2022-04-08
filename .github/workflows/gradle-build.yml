@@ -48,7 +48,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
     - name: Upload Artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ inputs.name }}
         path: ${{ inputs.target }}
