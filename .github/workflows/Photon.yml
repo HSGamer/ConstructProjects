@@ -14,3 +14,4 @@ jobs:
     with:
       repository: "Photon-GitHub/AACAdditionPro"
       name: "AACAdditionPro"
+      java: 17

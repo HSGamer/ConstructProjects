@@ -41,7 +41,7 @@ jobs:
       with:
         repository: ${{ inputs.repository }}
     - name: Set up JDK
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v3.3.0
       with:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
@@ -53,7 +53,7 @@ jobs:
       env:
         MAVEN_OPTS: ${{ inputs.opts }}
     - name: Upload Artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ inputs.name }}
         path: ${{ inputs.target }}
