@@ -37,9 +37,6 @@ jobs:
   build:
     runs-on: ${{ inputs.os }}
     steps:
-    - uses: actions/checkout@v3
-      with:
-        repository: ${{ inputs.repository }}
     - uses: sudosubin/git-clone-action@v1
       with:
         repository: ${{ inputs.repository }}
