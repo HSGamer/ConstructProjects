@@ -5,10 +5,6 @@ on:
       repository:
         required: true
         type: string
-      platform:
-        default: 'github'
-        required: false
-        type: string
       target:
         default: 'target/*.jar'
         required: false
@@ -41,10 +37,9 @@ jobs:
   build:
     runs-on: ${{ inputs.os }}
     steps:
-    - uses: sudosubin/git-clone-action@v1
+    - uses: actions/checkout@v3
       with:
         repository: ${{ inputs.repository }}
-        platform: ${{ inputs.platform }}
     - name: Set up JDK
       uses: actions/setup-java@v3.4.1
       with:
