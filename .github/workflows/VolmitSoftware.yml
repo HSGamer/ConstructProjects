@@ -15,3 +15,9 @@ jobs:
       repository: "VolmitSoftware/Iris"
       name: "Iris"
       java: "17"
+  Adapt:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "VolmitSoftware/Adapt"
+      name: "Adapt"
+      java: "17"
