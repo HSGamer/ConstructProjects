@@ -9,6 +9,20 @@ on:
     - cron: '0 */6 * * *'
 
 jobs:
+  Boosters:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/Boosters"
+      target: "bin/*"
+      name: "Boosters"
+      java: 17
+  Actions:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/Actions"
+      target: "bin/*"
+      name: "Actions"
+      java: 17
   EcoJobs:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
