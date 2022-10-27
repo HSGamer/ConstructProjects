@@ -93,3 +93,17 @@ jobs:
     with:
       repository: "Auxilor/libreforge"
       name: "libreforge"
+  Boosters:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/Boosters"
+      target: "bin/*"
+      name: "Boosters"
+      java: 17
+  Actions:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/Actions"
+      target: "bin/*"
+      name: "Actions"
+      java: 17
