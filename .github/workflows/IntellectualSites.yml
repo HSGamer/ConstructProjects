@@ -14,3 +14,4 @@ jobs:
     with:
       repository: "IntellectualSites/PlotSquared"
       name: "PlotSquared"
+      tasks: "shadowJar"
