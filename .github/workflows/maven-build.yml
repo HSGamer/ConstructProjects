@@ -33,6 +33,10 @@ on:
         default: "-Xmx2048m --illegal-access=permit"
         required: false
         type: string
+      tasks:
+        default: "clean package"
+        required: false
+        type: string
 jobs:
   build:
     runs-on: ${{ inputs.os }}
@@ -49,7 +53,7 @@ jobs:
     - name: Run prebuild commands
       run: ${{ inputs.commands }}
     - name: Build with Maven
-      run: mvn clean package
+      run: mvn ${{ inputs.tasks }}
       env:
         MAVEN_OPTS: ${{ inputs.opts }}
     - name: Upload Artifacts
