@@ -29,6 +29,10 @@ on:
         default: 'ubuntu-latest'
         required: false
         type: string
+      tasks:
+        default: 'build'
+        required: false
+        type: string
 jobs:
   build:
     runs-on: ${{ inputs.os }}
@@ -46,7 +50,7 @@ jobs:
     - name: Grant permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew ${{ inputs.tasks }}
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
