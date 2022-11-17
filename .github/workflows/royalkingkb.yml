@@ -13,5 +13,5 @@ jobs:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
     repository: "ds58/Panilla" 
-    name "Panilla"
+    name: "Panilla"
     java: 17
