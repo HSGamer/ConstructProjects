@@ -53,6 +53,7 @@ jobs:
       with:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
+        cache: gradle
     - name: Run BuildTools
       if: "${{ inputs.buildtools }} == 'true'"
       uses: SpraxDev/Action-SpigotMC@v4
