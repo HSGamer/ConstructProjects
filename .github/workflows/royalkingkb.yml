@@ -1,0 +1,17 @@
+name: royalkingkb
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/royalkingkb.yml'
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  Panilla:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+    repository: "ds58/Panilla" 
+    name: "Panilla"
+    java: 17
