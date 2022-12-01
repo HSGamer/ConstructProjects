@@ -37,6 +37,14 @@ on:
         default: "clean package"
         required: false
         type: string
+      buildtools:
+        default: false
+        required: false
+        type: boolean
+      versions:
+        default: "latest"
+        required: false
+        type: string
 jobs:
   build:
     runs-on: ${{ inputs.os }}
@@ -50,6 +58,18 @@ jobs:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
         cache: maven
+    - name: Run BuildTools
+      if: "${{ inputs.buildtools }} == 'true'"
+      uses: SpraxDev/Action-SpigotMC@v4
+      with:
+        versions: ${{ inputs.versions }}
+        generateSrc: false
+        generateDoc: false
+        disableJavaCheck: false
+        remapped: false
+        forceRun: false
+        threads: -1
+        buildToolProvider: SpigotMC
     - name: Run prebuild commands
       run: ${{ inputs.commands }}
     - name: Build with Maven
