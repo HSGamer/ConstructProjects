@@ -61,7 +61,7 @@ jobs:
         versions: ${{ inputs.buildtools }}
         generateSrc: false
         generateDoc: false
-        disableJavaCheck: false
+        disableJavaCheck: true
         remapped: false
         forceRun: false
         threads: -1
