@@ -37,6 +37,10 @@ on:
         default: ""
         required: false
         type: string
+      buildtools-java:
+        default: ''
+        required: false
+        type: string
 jobs:
   build:
     runs-on: ${{ inputs.os }}
@@ -44,10 +48,12 @@ jobs:
     - uses: actions/checkout@v3
       with:
         repository: ${{ inputs.repository }}
-    - name: Set up JDK
+        
+    - name: Set up Buildtools JDK
+      if: ${{ inputs.buildtools-java != '' }}
       uses: actions/setup-java@v3.6.0
       with:
-        java-version: ${{ inputs.java }}
+        java-version: ${{ inputs.buildtools-java }}
         distribution: ${{ inputs.distribution }}
         cache: gradle
     - name: Run BuildTools
@@ -62,6 +68,13 @@ jobs:
         forceRun: false
         threads: -1
         buildToolProvider: SpigotMC
+        
+    - name: Set up JDK
+      uses: actions/setup-java@v3.6.0
+      with:
+        java-version: ${{ inputs.java }}
+        distribution: ${{ inputs.distribution }}
+        cache: gradle
     - name: Run prebuild commands
       run: ${{ inputs.commands }}
     - name: Grant permission for gradlew
