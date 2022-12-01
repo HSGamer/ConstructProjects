@@ -34,11 +34,7 @@ on:
         required: false
         type: string
       buildtools:
-        default: false
-        required: false
-        type: boolean
-      versions:
-        default: "latest"
+        default: ""
         required: false
         type: string
 jobs:
@@ -55,10 +51,10 @@ jobs:
         distribution: ${{ inputs.distribution }}
         cache: gradle
     - name: Run BuildTools
-      if: ${{ inputs.buildtools }}
+      if: ${{ inputs.buildtools != '' }}
       uses: SpraxDev/Action-SpigotMC@v4
       with:
-        versions: ${{ inputs.versions }}
+        versions: ${{ inputs.buildtools }}
         generateSrc: false
         generateDoc: false
         disableJavaCheck: false
