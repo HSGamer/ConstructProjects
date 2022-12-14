@@ -21,6 +21,7 @@ jobs:
       with:
         java-version: |
           8
+          16
           17
         distribution: 'temurin'
     - name: Run BuildTools
@@ -34,7 +35,7 @@ jobs:
         "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.16.1
         "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.16.2
         "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.16.4
-        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.17
+        "${JAVA_HOME_16_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.17
         "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.18.2
         "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.19.2
         "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev latest
