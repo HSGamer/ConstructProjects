@@ -26,11 +26,11 @@ jobs:
     - name: Run BuildTools
       run: |
         curl -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.8.8
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.12.2
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.13.2
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.14.4
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.15
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.8.8 --compile craftbukkit
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.12.2 --compile craftbukkit
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.13.2 --compile craftbukkit
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.14.4 --compile craftbukkit
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.15 --compile craftbukkit
         "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.16.1
         "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.16.2
         "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.16.4
