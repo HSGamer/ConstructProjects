@@ -19,41 +19,47 @@ jobs:
     - name: Set up JDK 8
       uses: actions/setup-java@v3
       with:
-        java-version: '8'
+        java-version: |
+          8
+          17
         distribution: 'temurin'
-    - name: Run BuildTools for Legacy Versions
-      uses: SpraxDev/Action-SpigotMC@v4
-      with:
-        versions: "1.8.8, 1.12.2, 1.13.2, 1.14.4, 1.15, 1.16.1, 1.16.2, 1.16.4"
-        generateSrc: false
-        generateDoc: false
-        disableJavaCheck: true
-        remapped: false
-        forceRun: false
-        threads: -1
-        buildToolProvider: SpigotMC
+    - name: Run BuildTools
+      run: |
+        curl -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -version
+#     - name: Run BuildTools for Legacy Versions
+#       uses: SpraxDev/Action-SpigotMC@v4
+#       with:
+#         versions: "1.8.8, 1.12.2, 1.13.2, 1.14.4, 1.15, 1.16.1, 1.16.2, 1.16.4"
+#         generateSrc: false
+#         generateDoc: false
+#         disableJavaCheck: true
+#         remapped: false
+#         forceRun: false
+#         threads: -1
+#         buildToolProvider: SpigotMC
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-    - name: Run BuildTools for Modern Versions
-      uses: SpraxDev/Action-SpigotMC@v4
-      with:
-        versions: "1.17, 1.18.2, 1.19.2, latest"
-        generateSrc: false
-        generateDoc: false
-        disableJavaCheck: true
-        remapped: false
-        forceRun: false
-        threads: -1
-        buildToolProvider: SpigotMC
+#     - name: Set up JDK 17
+#       uses: actions/setup-java@v3
+#       with:
+#         java-version: '17'
+#         distribution: 'temurin'
+#     - name: Run BuildTools for Modern Versions
+#       uses: SpraxDev/Action-SpigotMC@v4
+#       with:
+#         versions: "1.17, 1.18.2, 1.19.2, latest"
+#         generateSrc: false
+#         generateDoc: false
+#         disableJavaCheck: true
+#         remapped: false
+#         forceRun: false
+#         threads: -1
+#         buildToolProvider: SpigotMC
         
-    - name: Build with Gradle
-      run: ./gradlew build
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: "Panilla"
-        path: 'target/*.jar'
+#     - name: Build with Gradle
+#       run: ./gradlew build
+#     - name: Upload Artifacts
+#       uses: actions/upload-artifact@v3
+#       with:
+#         name: "Panilla"
+#         path: 'target/*.jar'
