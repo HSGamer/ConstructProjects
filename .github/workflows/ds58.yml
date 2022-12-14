@@ -26,18 +26,18 @@ jobs:
     - name: Run BuildTools
       run: |
         curl -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.8.8 --compile craftbukkit
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.12.2 --compile craftbukkit
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.13.2 --compile craftbukkit
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.14.4 --compile craftbukkit
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.15 --compile craftbukkit
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.16.1
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.16.2
-        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.16.4
-        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.17
-        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.18.2
-        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools --rev 1.19.2
-        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools --rev latest
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.8.8 --compile craftbukkit
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.12.2 --compile craftbukkit
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.13.2 --compile craftbukkit
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.14.4 --compile craftbukkit
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.15 --compile craftbukkit
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.16.1
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.16.2
+        "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.16.4
+        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.17
+        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.18.2
+        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.19.2
+        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev latest
         
     - name: Build with Gradle
       run: ./gradlew build
