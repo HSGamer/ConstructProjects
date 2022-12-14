@@ -39,7 +39,7 @@ jobs:
         "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.18
         "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.18.2
         "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.19.2
-        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev latest
+        "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.19.3
         
     - name: Build with Gradle
       run: ./gradlew build
