@@ -21,7 +21,6 @@ jobs:
       with:
         java-version: '8'
         distribution: 'temurin'
-        cache: gradle
     - name: Run BuildTools for Legacy Versions
       uses: SpraxDev/Action-SpigotMC@v4
       with:
@@ -39,7 +38,6 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
     - name: Run BuildTools for Modern Versions
       uses: SpraxDev/Action-SpigotMC@v4
       with:
