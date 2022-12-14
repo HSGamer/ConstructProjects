@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: '8'
         distribution: 'temurin'
-        cache: maven
+        cache: gradle
     - name: Run BuildTools for Legacy Versions
       uses: SpraxDev/Action-SpigotMC@v4
       with:
@@ -39,7 +39,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: maven
+        cache: gradle
     - name: Run BuildTools for Modern Versions
       uses: SpraxDev/Action-SpigotMC@v4
       with:
@@ -52,8 +52,8 @@ jobs:
         threads: -1
         buildToolProvider: SpigotMC
         
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    - name: Build with Gradle
+      run: ./gradlew build
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
