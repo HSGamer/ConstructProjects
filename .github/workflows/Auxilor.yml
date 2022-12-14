@@ -39,7 +39,7 @@ jobs:
       target: "bin/*"
       name: "EcoBosses"
       commands: |
-        sed -i 's/R3.0.1/R3.1.1/' ./eco-core/core-plugin/build.gradle
+        sed -i 's/R3.0.1/R3.1.1/' ./eco-core/core-plugin/build.gradle.kts
   EcoEnchants:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
