@@ -10,22 +10,16 @@ on:
 
 jobs:
   Panilla:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        repository: "ds58/Panilla"
-      
-    - name: Set up JDK 8
-      uses: actions/setup-java@v3
-      with:
-        java-version: |
-          8
-          16
-          17
-        distribution: 'temurin'
-    - name: Run BuildTools
-      run: |
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "ds58/Panilla"
+      target: 'target/*.jar'
+      name: "Panilla"
+      java: |
+        8
+        16
+        17
+      commands: |
         curl -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
         "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.8.8 --compile craftbukkit
         "${JAVA_HOME_8_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.12.2 --compile craftbukkit
@@ -40,11 +34,3 @@ jobs:
         "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.18.2
         "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.19.2
         "${JAVA_HOME_17_${{ runner.arch }}}"/bin/java -jar BuildTools.jar --rev 1.19.3
-        
-    - name: Build with Gradle
-      run: ./gradlew build
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: "Panilla"
-        path: 'target/*.jar'
