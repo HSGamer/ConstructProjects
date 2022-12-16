@@ -9,6 +9,13 @@ on:
     - cron: '0 */6 * * *'
 
 jobs:
+  EcoShop:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/EcoShop"
+      target: "bin/*"
+      name: "EcoShop"
+      java: 17
   EcoJobs:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
