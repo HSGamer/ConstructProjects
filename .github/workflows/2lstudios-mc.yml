@@ -18,5 +18,5 @@ jobs:
       java: 8
       commands: |
         ./build.sh
-        git config user.email "maiminhbinh259@gmail.com"
-        git config user.name "Dungjava"
+        "$git config user.email "maiminhbinh259@gmail.com"
+        "$git config user.name "Dungjava"
