@@ -8,10 +8,12 @@ on:
   schedule:
     - cron: '0 0 */3 * *'
 
-jobs:
-  uses: HSGamer/ConstructProjects/.github/workflows/maven-build.yml@main
-  with:
-    repository: "drtshock/PlayerVaults"
-    target: "target/*"
-    name: "PlayerVaults"
-    java: 17
+jobs: 
+  PlayerVaults:
+    uses: HSGamer/ConstructProjects/.github/workflows/maven-build.yml@main
+    with:
+      repository: "drtshock/PlayerVaults"
+      target: "target/*"
+      name: "PlayerVaults"
+      java: 17
+ 
