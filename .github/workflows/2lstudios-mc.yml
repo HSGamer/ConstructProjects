@@ -15,4 +15,4 @@ jobs:
       repository: "2lstudios-mc/FlamePaper"
       target: "target/*"
       name: "FlamePaper"
-      jdk: 8
+      java: 8
