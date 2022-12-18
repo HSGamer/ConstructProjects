@@ -16,3 +16,5 @@ jobs:
       target: "target/*"
       name: "FlamePaper"
       java: 8
+      commands: |
+        ./build.sh
