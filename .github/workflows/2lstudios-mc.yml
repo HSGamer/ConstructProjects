@@ -18,3 +18,5 @@ jobs:
       java: 8
       commands: |
         ./build.sh
+        git config --global user.email "maiminhbinh259@gmail.com"
+        git config --global user.name "Dungjava"
