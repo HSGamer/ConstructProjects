@@ -10,8 +10,8 @@ on:
 
 jobs:
   uses: HSGamer/ConstructProjects/.github/workflowsmaven-build.yml@main
-    with:
-      repository: "drtshock/PlayerVaults"
-      target: "target/*"
-      name: "PlayerVaults"
-      java: 17
+  with:
+    repository: "drtshock/PlayerVaults"
+    target: "target/*"
+    name: "PlayerVaults"
+    java: 17
