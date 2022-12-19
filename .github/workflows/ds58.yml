@@ -13,8 +13,8 @@ jobs:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "ds58/Panilla"
-      target: 'target/*.jar'
       name: "Panilla"
+      target: "target/**/*.jar"
       java: |
         8
         16
