@@ -14,6 +14,7 @@ jobs:
     with:
       repository: "ds58/Panilla"
       name: "Panilla"
+      target: "**/*.jar"
       java: |
         8
         16
