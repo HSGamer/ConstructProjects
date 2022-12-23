@@ -13,7 +13,6 @@ jobs:
     uses: HSGamer/ConstructProjects/.github/workflows/maven-build.yml@main
     with:
       repository: "drtshock/PlayerVaults"
-      target: "target/*.jar"
       name: "PlayerVaults"
       java: 17
  
