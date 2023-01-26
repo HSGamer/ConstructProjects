@@ -15,7 +15,7 @@ jobs:
       repository: "Photon-GitHub/AACAdditionPro"
       name: "AACAdditionPro"
       java: 17
-  AACAdditionPro_8-3-2:
+  AACAdditionPro_8-3-3:
     uses: HSGamer/ConstructProjects/.github/workflows/maven-build.yml@main
     with:
       repository: "Dungjava/AntiCheatAddition"
