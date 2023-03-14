@@ -2,11 +2,11 @@ name: Akiranya
 
 on:
   push:
-    branches: [ main ]
+    branches: [ mewcraft ]
     paths:
       - '.github/workflows/Akiranya.yml'
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: '0 0 */1 * *'
 
 jobs:
   PlotSquared:
@@ -14,4 +14,4 @@ jobs:
     with:
       repository: "Akiranya/ExcellentCrates-paper"
       name: "ExcellentCrates-paper"
-      java: 18
+      java: 17
