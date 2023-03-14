@@ -1,0 +1,17 @@
+name: Akiranya
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/Akiranya.yml'
+  schedule:
+    - cron: '0 */12 * * *'
+
+jobs:
+  PlotSquared:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Akiranya/ExcellentCrates-paper"
+      name: "ExcellentCrates-paper"
+      target: "Bukkit/build/libs/*.jar"
