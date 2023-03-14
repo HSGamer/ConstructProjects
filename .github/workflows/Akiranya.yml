@@ -2,7 +2,7 @@ name: Akiranya
 
 on:
   push:
-    branches: [ mewcraft ]
+    branches: [ main ]
     paths:
       - '.github/workflows/Akiranya.yml'
   schedule:
