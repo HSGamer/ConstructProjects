@@ -31,7 +31,7 @@ jobs:
       name: "EcoPets"
       java: 17
       commands: |
-        sed -i 's/R3.0.1/R3.1.5/' ./eco-core/core-plugin/build.gradle
+        sed -i 's/R3.1.4/R3.1.5/' ./eco-core/core-plugin/build.gradle
   EcoCrates:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
