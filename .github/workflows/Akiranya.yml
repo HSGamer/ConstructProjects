@@ -9,8 +9,8 @@ on:
     - cron: '0 0 */1 * *'
 
 jobs:
-  ExcellentCrates:
+  ExcellentCrates-paper:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml
     with:
       repository: "Akiranya/ExcellentCrates-paper"
-      name: "ExcellentCrates-paper"
+      name: "ExcellentCrates"
