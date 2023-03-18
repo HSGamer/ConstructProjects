@@ -10,7 +10,7 @@ on:
 
 jobs:
   ExcellentCrates-paper:
-    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Akiranya/ExcellentCrates-paper"
       name: "ExcellentCrates"
