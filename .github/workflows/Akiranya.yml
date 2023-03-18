@@ -10,8 +10,7 @@ on:
 
 jobs:
   PlotSquared:
-    uses: HSGamer/ConstructProjects/.github/workflows/maven-build.yml@main
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml
     with:
       repository: "Akiranya/ExcellentCrates-paper"
       name: "ExcellentCrates-paper"
-      java: 17
