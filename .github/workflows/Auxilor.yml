@@ -93,17 +93,20 @@ jobs:
       repository: "Auxilor/EcoItems"
       target: "bin/*"
       name: "EcoItems"
+      java: 17
   StatTrackers:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/StatTrackers"
       target: "bin/*"
       name: "StatTrackers"
+      java: 17
   libreforge:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/libreforge"
       name: "libreforge"
+      java: 17
   Boosters:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
