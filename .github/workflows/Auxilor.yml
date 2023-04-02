@@ -31,7 +31,7 @@ jobs:
       name: "EcoPets"
       java: 17
       commands: |
-        sed -i 's/R3.1.4/R3.1.5/' ./eco-core/core-plugin/build.gradle
+        sed -i 's/R3.1.4/R3.1.5/' ./eco-core/core-plugin/build.gradle.kts
   EcoCrates:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
@@ -45,6 +45,7 @@ jobs:
       repository: "Auxilor/EcoBosses"
       target: "bin/*"
       name: "EcoBosses"
+      java: 17
       commands: |
         sed -i 's/R3.0.1/R3.1.5/' ./eco-core/core-plugin/build.gradle.kts
   EcoEnchants:
@@ -74,12 +75,14 @@ jobs:
       repository: "Auxilor/EcoWeapons"
       target: "bin/*"
       name: "EcoWeapons"
+      java: 17
   Talismans:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/Talismans"
       target: "bin/*"
       name: "Talismans"
+      java: 17
   EcoArmor:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
@@ -122,4 +125,4 @@ jobs:
       name: "Actions"
       java: 17
       commands: |
-        sed -i 's/R2.5.0/R3.1.5/' ./eco-core/core-plugin/build.gradle
+        sed -i 's/R2.5.0/R3.1.5/' ./eco-core/core-plugin/build.gradle.kts
