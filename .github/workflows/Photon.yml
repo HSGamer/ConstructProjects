@@ -9,9 +9,9 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  AACAdditionPro:
+  AntiCheatAddition:
     uses: HSGamer/ConstructProjects/.github/workflows/maven-build.yml@main
     with:
-      repository: "Photon-GitHub/AACAdditionPro"
-      name: "AACAdditionPro"
+      repository: "Photon-GitHub/AntiCheatAddition"
+      name: "AntiCheatAddition"
       java: 17
