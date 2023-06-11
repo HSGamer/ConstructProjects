@@ -38,3 +38,4 @@ jobs:
         "${!JAVA_HOME_17}"/bin/java -jar BuildTools.jar --rev 1.19.2
         "${!JAVA_HOME_17}"/bin/java -jar BuildTools.jar --rev 1.19.3
         "${!JAVA_HOME_17}"/bin/java -jar BuildTools.jar --rev 1.19.4
+        "${!JAVA_HOME_17}"/bin/java -jar BuildTools.jar --rev 1.20
