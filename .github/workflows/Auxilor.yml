@@ -31,7 +31,7 @@ jobs:
       name: "EcoPets"
       java: 17
       commands: |
-        sed -i 's/R3.1.5/R3.1.8/' ./eco-core/core-plugin/build.gradle.kts
+        sed -i 's/R3.1.7/R3.1.8/' ./eco-core/core-plugin/build.gradle.kts
   EcoCrates:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
@@ -47,7 +47,7 @@ jobs:
       name: "EcoBosses"
       java: 17
       commands: |
-        sed -i 's/R3.1.5/R3.1.8/' ./eco-core/core-plugin/build.gradle.kts
+        sed -i 's/R3.1.7/R3.1.8/' ./eco-core/core-plugin/build.gradle.kts
   EcoEnchants:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
