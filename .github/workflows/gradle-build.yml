@@ -46,12 +46,11 @@ jobs:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
         cache: gradle
-    - name: Run prebuild commands
-      run: ${{ inputs.commands }}
-    - name: Grant permission for gradlew
-      run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew ${{ inputs.tasks }}
+      run: |
+        ${{ inputs.commands }}
+        chmod +x gradlew
+        ./gradlew ${{ inputs.tasks }}
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
