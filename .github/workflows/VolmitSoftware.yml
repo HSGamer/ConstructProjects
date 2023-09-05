@@ -21,3 +21,9 @@ jobs:
       repository: "VolmitSoftware/Adapt"
       name: "Adapt"
       java: "17"
+  React:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "VolmitSoftware/React"
+      name: "React"
+      java: "17"
