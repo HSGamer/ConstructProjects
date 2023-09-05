@@ -37,9 +37,9 @@ jobs:
       run: |
         cd ./React
         chmod +x gradlew
-        ./gradlew build
+        ./gradlew shadowJar
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
         name: "React"
-        path: "React/build/**/*.jar"
+        path: "React/build/libs/*.jar"
