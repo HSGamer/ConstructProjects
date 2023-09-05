@@ -27,5 +27,6 @@ jobs:
       repository: "VolmitSoftware/React"
       name: "React"
       java: "17"
+      tasks: "shadowJar"
       commands: "cd ./React"
       target: "React/build/libs/*.jar"
