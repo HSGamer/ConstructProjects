@@ -50,10 +50,10 @@ jobs:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
         cache: maven
-    - name: Run prebuild commands
-      run: ${{ inputs.commands }}
     - name: Build with Maven
-      run: mvn ${{ inputs.tasks }}
+      run: |
+        ${{ inputs.commands }}
+        mvn ${{ inputs.tasks }}
       env:
         MAVEN_OPTS: ${{ inputs.opts }}
     - name: Upload Artifacts
