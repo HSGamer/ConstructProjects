@@ -22,24 +22,10 @@ jobs:
       name: "Adapt"
       java: "17"
   React:
-    runs-on: "ubuntu-latest"
-    steps:
-    - uses: actions/checkout@v4
-      with:
-        repository: "VolmitSoftware/React"
-    - name: Set up JDK
-      uses: actions/setup-java@v3.12.0
-      with:
-        java-version: 17
-        distribution: temurin
-        cache: gradle
-    - name: Build with Gradle
-      run: |
-        cd ./React
-        chmod +x gradlew
-        ./gradlew shadowJar
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: "React"
-        path: "React/build/libs/*.jar"
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "VolmitSoftware/React"
+      name: "React"
+      java: "17"
+      commands: "cd ./React"
+      target: "React/build/libs/*.jar"
