@@ -41,19 +41,19 @@ jobs:
   build:
     runs-on: ${{ inputs.os }}
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: ${{ inputs.repository }}
     - name: Set up JDK
-      uses: actions/setup-java@v3.12.0
+      uses: actions/setup-java@v3.13.0
       with:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
         cache: maven
-    - name: Run prebuild commands
-      run: ${{ inputs.commands }}
     - name: Build with Maven
-      run: mvn ${{ inputs.tasks }}
+      run: |
+        ${{ inputs.commands }}
+        mvn ${{ inputs.tasks }}
       env:
         MAVEN_OPTS: ${{ inputs.opts }}
     - name: Upload Artifacts
