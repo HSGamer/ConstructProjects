@@ -9,7 +9,14 @@ on:
     - cron: '0 */6 * * *'
 
 jobs:
+  libreforge:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/libreforge"
+      name: "libreforge"
+      java: 17
   EcoShop:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoShop"
@@ -17,6 +24,7 @@ jobs:
       name: "EcoShop"
       java: 17
   EcoJobs:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoJobs"
@@ -24,6 +32,7 @@ jobs:
       name: "EcoJobs"
       java: 17
   EcoPets:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoPets"
@@ -33,6 +42,7 @@ jobs:
       commands: |
         sed -i 's/R3.1.6/R3.1.8/' ./eco-core/core-plugin/build.gradle.kts
   EcoCrates:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoCrates"
@@ -40,6 +50,7 @@ jobs:
       name: "EcoCrates"
       java: 17
   EcoBosses:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoBosses"
@@ -49,6 +60,7 @@ jobs:
       commands: |
         sed -i 's/R3.1.6/R3.1.8/' ./eco-core/core-plugin/build.gradle.kts
   EcoEnchants:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoEnchants"
@@ -56,6 +68,7 @@ jobs:
       name: "EcoEnchants"
       java: 17
   EcoSkills:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoSkills"
@@ -63,6 +76,7 @@ jobs:
       name: "EcoSkills"
       java: 17
   Reforges:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/Reforges"
@@ -70,6 +84,7 @@ jobs:
       name: "Reforges"
       java: 17
   EcoWeapons:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoWeapons"
@@ -77,6 +92,7 @@ jobs:
       name: "EcoWeapons"
       java: 17
   Talismans:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/Talismans"
@@ -84,6 +100,7 @@ jobs:
       name: "Talismans"
       java: 17
   EcoArmor:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoArmor"
@@ -91,6 +108,7 @@ jobs:
       name: "EcoArmor"
       java: 17
   EcoItems:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoItems"
@@ -98,19 +116,15 @@ jobs:
       name: "EcoItems"
       java: 17
   StatTrackers:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/StatTrackers"
       target: "bin/*"
       name: "StatTrackers"
       java: 17
-  libreforge:
-    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
-    with:
-      repository: "Auxilor/libreforge"
-      name: "libreforge"
-      java: 17
   Boosters:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/Boosters"
@@ -118,6 +132,7 @@ jobs:
       name: "Boosters"
       java: 17
   Actions:
+    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/Actions"
