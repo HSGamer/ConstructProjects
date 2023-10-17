@@ -45,6 +45,10 @@ on:
         default: '.'
         required: false
         type: string
+      readonly:
+        default: false
+        required: false
+        type: boolean
 jobs:
   build:
     runs-on: ${{ inputs.os }}
@@ -68,6 +72,7 @@ jobs:
         arguments: ${{ inputs.tasks }}
         gradle-version: ${{ inputs.version }}
         build-root-directory: ${{ inputs.dir }}
+        read-only: ${{ inputs.readonly }}
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
