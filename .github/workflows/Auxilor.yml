@@ -15,15 +15,6 @@ jobs:
       repository: "Auxilor/libreforge"
       name: "libreforge"
       java: 17
-  EcoShop:
-    needs: libreforge
-    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
-    with:
-      repository: "Auxilor/EcoShop"
-      target: "bin/*"
-      name: "EcoShop"
-      java: 17
-      readonly: true
   EcoJobs:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
