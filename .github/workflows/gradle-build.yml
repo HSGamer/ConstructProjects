@@ -33,6 +33,18 @@ on:
         default: 'build'
         required: false
         type: string
+      version:
+        default: 'wrapper'
+        required: false
+        type: string
+      cache:
+        default: 'default'
+        required: false
+        type: string
+      dir:
+        default: '.'
+        required: false
+        type: string
 jobs:
   build:
     runs-on: ${{ inputs.os }}
@@ -46,11 +58,16 @@ jobs:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
         cache: gradle
-    - name: Build with Gradle
+    - name: Run commands
       run: |
         ${{ inputs.commands }}
-        chmod +x gradlew
-        ./gradlew ${{ inputs.tasks }}
+    - name: Build with Gradle
+      uses: burrunan/gradle-cache-action@v1
+      with:
+        job-id: ${{ github.workflow	}}-${{ inputs.cache }}
+        arguments: ${{ inputs.tasks }}
+        gradle-version: ${{ inputs.version }}
+        build-root-directory: ${{ inputs.dir }}
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
