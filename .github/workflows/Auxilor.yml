@@ -16,7 +16,6 @@ jobs:
       ref: "4.33.0"
       name: "libreforge"
       java: 17
-      cache: ecoshop
   EcoShop:
     needs: libreforge-ecoshop
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -26,7 +25,6 @@ jobs:
       name: "EcoShop"
       java: 17
       readonly: true
-      cache: ecoshop
 
   libreforge:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
