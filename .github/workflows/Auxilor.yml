@@ -9,6 +9,25 @@ on:
     - cron: '0 */6 * * *'
 
 jobs:
+  libreforge-ecoshop:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/libreforge"
+      ref: "4.33.0"
+      name: "libreforge"
+      java: 17
+      cache: ecoshop
+  EcoShop:
+    needs: libreforge-ecoshop
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/EcoShop"
+      target: "bin/*"
+      name: "EcoShop"
+      java: 17
+      readonly: true
+      cache: ecoshop
+
   libreforge:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
