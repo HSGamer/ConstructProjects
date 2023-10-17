@@ -43,7 +43,7 @@ jobs:
       java: 17
       readonly: true
       commands: |
-        sed -i 's/R3.1.6/R3.1.9/' ./eco-core/core-plugin/build.gradle.kts
+        sed -i 's/R3.1.8/R3.1.9/' ./eco-core/core-plugin/build.gradle.kts
   EcoCrates:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
@@ -62,7 +62,7 @@ jobs:
       java: 17
       readonly: true
       commands: |
-        sed -i 's/R3.1.6/R3.1.9/' ./eco-core/core-plugin/build.gradle.kts
+        sed -i 's/R3.1.8/R3.1.9/' ./eco-core/core-plugin/build.gradle.kts
   EcoEnchants:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
