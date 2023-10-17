@@ -5,6 +5,10 @@ on:
       repository:
         required: true
         type: string
+      ref:
+        default: ''
+        required: false
+        type: string
       target:
         default: 'target/*.jar'
         required: false
@@ -44,6 +48,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         repository: ${{ inputs.repository }}
+        ref: ${{ inputs.ref }}
     - name: Set up JDK
       uses: actions/setup-java@v3.13.0
       with:
