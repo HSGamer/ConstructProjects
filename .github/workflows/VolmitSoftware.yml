@@ -28,5 +28,5 @@ jobs:
       name: "React"
       java: "17"
       tasks: "shadowJar"
-      commands: "cd ./React"
+      dir: "React"
       target: "React/build/libs/*.jar"
