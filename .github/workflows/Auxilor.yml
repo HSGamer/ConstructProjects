@@ -23,6 +23,7 @@ jobs:
       target: "bin/*"
       name: "EcoShop"
       java: 17
+      readonly: true
   EcoJobs:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -31,6 +32,7 @@ jobs:
       target: "bin/*"
       name: "EcoJobs"
       java: 17
+      readonly: true
   EcoPets:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -39,16 +41,17 @@ jobs:
       target: "bin/*"
       name: "EcoPets"
       java: 17
+      readonly: true
       commands: |
-        sed -i 's/R3.1.6/R3.1.8/' ./eco-core/core-plugin/build.gradle.kts
+        sed -i 's/R3.1.6/R3.1.9/' ./eco-core/core-plugin/build.gradle.kts
   EcoCrates:
-    needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
       repository: "Auxilor/EcoCrates"
       target: "bin/*"
       name: "EcoCrates"
       java: 17
+      readonly: true
   EcoBosses:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -57,8 +60,9 @@ jobs:
       target: "bin/*"
       name: "EcoBosses"
       java: 17
+      readonly: true
       commands: |
-        sed -i 's/R3.1.6/R3.1.8/' ./eco-core/core-plugin/build.gradle.kts
+        sed -i 's/R3.1.6/R3.1.9/' ./eco-core/core-plugin/build.gradle.kts
   EcoEnchants:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -67,6 +71,7 @@ jobs:
       target: "bin/*"
       name: "EcoEnchants"
       java: 17
+      readonly: true
   EcoSkills:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -75,6 +80,7 @@ jobs:
       target: "bin/*"
       name: "EcoSkills"
       java: 17
+      readonly: true
   Reforges:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -83,6 +89,7 @@ jobs:
       target: "bin/*"
       name: "Reforges"
       java: 17
+      readonly: true
   EcoWeapons:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -91,6 +98,7 @@ jobs:
       target: "bin/*"
       name: "EcoWeapons"
       java: 17
+      readonly: true
   Talismans:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -99,6 +107,7 @@ jobs:
       target: "bin/*"
       name: "Talismans"
       java: 17
+      readonly: true
   EcoArmor:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -107,6 +116,7 @@ jobs:
       target: "bin/*"
       name: "EcoArmor"
       java: 17
+      readonly: true
   EcoItems:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -115,6 +125,7 @@ jobs:
       target: "bin/*"
       name: "EcoItems"
       java: 17
+      readonly: true
   StatTrackers:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -123,6 +134,7 @@ jobs:
       target: "bin/*"
       name: "StatTrackers"
       java: 17
+      readonly: true
   Boosters:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -131,6 +143,7 @@ jobs:
       target: "bin/*"
       name: "Boosters"
       java: 17
+      readonly: true
   Actions:
     needs: libreforge
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
@@ -139,5 +152,6 @@ jobs:
       target: "bin/*"
       name: "Actions"
       java: 17
+      readonly: true
       commands: |
-        sed -i 's/R2.5.0/R3.1.8/' ./eco-core/core-plugin/build.gradle.kts
+        sed -i 's/R2.5.0/R3.1.9/' ./eco-core/core-plugin/build.gradle.kts
