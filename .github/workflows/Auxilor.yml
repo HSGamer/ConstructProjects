@@ -155,5 +155,3 @@ jobs:
       name: "EcoShop"
       java: 17
       readonly: true
-      commands: |
-        sed -i 's/4.33.0/4.37.0/' ./build.gradle
