@@ -50,7 +50,7 @@ jobs:
         repository: ${{ inputs.repository }}
         ref: ${{ inputs.ref }}
     - name: Set up JDK
-      uses: actions/setup-java@v4.0.0
+      uses: actions/setup-java@v4.1.0
       with:
         java-version: ${{ inputs.java }}
         distribution: ${{ inputs.distribution }}
