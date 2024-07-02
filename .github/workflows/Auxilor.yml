@@ -65,14 +65,6 @@ jobs:
       name: "Reforges"
       java: 17
       readonly: true
-  EcoWeapons:
-    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
-    with:
-      repository: "Auxilor/EcoWeapons"
-      target: "bin/*"
-      name: "EcoWeapons"
-      java: 17
-      readonly: true
   Talismans:
     uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
     with:
@@ -128,4 +120,12 @@ jobs:
       target: "bin/*"
       name: "EcoShop"
       java: 17
+      readonly: true
+  EcoBits:
+    uses: HSGamer/ConstructProjects/.github/workflows/gradle-build.yml@main
+    with:
+      repository: "Auxilor/EcoBits"
+      target: "bin/*"
+      name: "EcoEcoBits"
+      java: 17.0.1
       readonly: true
